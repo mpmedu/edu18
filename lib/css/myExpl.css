@@ -1,0 +1,156 @@
+/* 
+---------------------------
+Styles for myExplorer which is used to select a file on the server  
+---------------------------
+ */
+
+/* #dialogmask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(80, 80, 80, 0.4);
+  z-index: 5800;
+} */
+
+
+#myExplorer {
+  font: 0.9rem Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: default;
+  z-index: 5900;
+  background-color: #f8f8f8;
+  text-align: left;
+  width: 510px;
+}
+
+
+#myExplorer.flexClass {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+#myExplorer #folders_div,
+#myExplorer #files_div {
+  width: 220px;
+  height: 230px;
+  border: solid 2px #888;
+  background-color: #fff;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 5px;
+}
+
+
+/* ******************************** */
+/* For #folderCover */
+/* ******************************** */
+#myExplorer #folderCover {
+  position: absolute;
+  background-color: #fff;
+  z-index: 6000;
+}
+
+#myExplorer #folderCover>span.itemName {
+  text-decoration: underline;
+}
+
+
+/* ******************************** */
+/* For #folderCover and .holder */
+/* ******************************** */
+#myExplorer .directory {
+  display: inline-block;
+  background-image: url(./icon/directory.png);
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  margin-bottom: -3px;
+}
+
+#myExplorer .folder_open {
+  background-image: url(./icon/folder_open.png);
+  background-repeat: no-repeat;
+}
+
+#myExplorer .itemName {
+  padding: 0 3px;
+  white-space: nowrap;
+}
+
+#myExplorer .items,
+#myExplorer li {
+  white-space: nowrap;
+}
+
+
+/* ******************************** */
+/* The folders div */
+/* ******************************** */
+/* this gives indent to sub category */
+#myExplorer #folders_div .subcatlistdiv {
+  margin-left: 8px;
+}
+
+#myExplorer .chosen {
+  background-color: #ddd !important;
+}
+
+#myExplorer #folders_div span.indx {
+  width: 16px;
+  display: inline-block;
+}
+
+#myExplorer #folders_div span.holder {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+#myExplorer #folders_div .right16 {
+  position: relative;
+  left: 16px;
+}
+
+
+/* ******************************** */
+/* The files div */
+/* ******************************** */
+#myExplorer #files_div li>span {
+  padding-left: 19px;
+  padding-right: 4px;
+  line-height: 18px;
+}
+
+/* This shows for any file type */
+#myExplorer #files_div .fileList li>span {
+  background-image: url(./icon/file.png);
+  background-repeat: no-repeat;
+}
+
+/* File Extensions - this is for the qna file type */
+#myExplorer #files_div .fileList li>span.ext_qna {
+  background-image: url(./icon/world-1.gif);
+  background-repeat: no-repeat;
+}
+
+#myExplorer #files_div li>span:hover {
+  background-color: #ddd;
+}
+
+
+/* ******************************** */
+/* The input box showing the file chosen */
+/* ******************************** */
+#myExplorer #fn_input {
+  width: 100%;
+  padding-left: 3px;
+  margin: 3px 0 8px;
+  color: black;
+  font-size: 0.8rem;
+}

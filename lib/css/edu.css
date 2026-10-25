@@ -1,0 +1,641 @@
+/*
+##############################################
+          General styles
+##############################################
+ */
+
+
+button {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border-width: 1px;
+  margin: 0.5em;
+}
+
+
+button:hover {
+  background-color: white;
+}
+
+
+html,
+body {
+  min-height: 100vh;
+  min-width: 800px;
+}
+
+
+body {
+  font: 0.8em Arial, Helvetica, sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+.textinput {
+  color: black;
+  width: 95%;
+  font-family: Cambria, "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  border: 1px solid #666;
+  padding-left: 3px;
+}
+
+
+input[readonly="true"] {
+  background-color: #ffc;
+}
+
+
+#bodymask {
+  z-index: 7000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+/* 
+   The box class in the common css file. It is needed for the startupbox, myExplorer, unlockbox, creatorloginbox, getqnakeybox, adminbox,
+    msgbox, yesnobox, loading, flashbox, endbox and for spinner div 
+*/
+
+.box {
+  /* z-index is 600 in common1.css */
+  z-index: 9000;
+}
+
+
+
+/* .ctr {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+
+
+/*
+##############################################
+          Content
+##############################################
+ */
+
+
+#wrapper {
+  background: white;
+  position: relative;
+  box-sizing: border-box;
+  flex-grow: 1;
+  z-index: 30;
+}
+
+#wrappermask {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: 3000;
+  left: 0;
+  right: 0;
+}
+
+
+
+/*
+##############################################
+          Audio volume slider
+##############################################
+ */
+
+.roundCorners {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -khtml-border-radius: 10px;
+  /* for old Konqueror browsers */
+}
+
+#cont {
+  position: relative;
+  width: 110px;
+  /* height: 12px; */
+  height: 18px;
+  padding: 1px;
+  border: 2px solid #888;
+  background-color: white;
+}
+
+#ball {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #1b1b1b;
+}
+
+.cont_class {
+  position: relative;
+  width: 80px;
+  height: 18px;
+  padding: 1px;
+  border: 2px solid #888;
+  background-color: white;
+}
+
+.ball_class {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #1b1b1b;
+}
+
+/**** Styles for the box for getting the settings for the audio volumes */
+.outer_sd {
+  width: 245px;
+  height: 2.5em;
+  position: relative;
+}
+
+.inner_sd {
+  position: absolute;
+  top: -1px;
+  right: 2px;
+}
+
+/* Audio volume slider.  END 
+   XXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+
+
+
+
+/* topdiv and bottomdiv
+   ======================================= */
+
+
+#topdiv {
+  background-color: #1b1b1b;
+  height: 80px;
+  /* needed - because it contains absolute elements */
+  position: relative;
+  border-bottom: 4px solid #bbb;
+
+}
+
+#debug {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font: 0.5em Cambria, 'Times New Roman', serif;
+  background-color: #1b1b1b;
+  color: grey;
+  z-index: 130;
+}
+
+/*  title, TestU, and the subject/pageName */
+
+#siteName {
+  color: white;
+  text-shadow: 2px 2px 0px #bbb;
+  font: 3.5em Cambria, 'Times New Roman', serif;
+  font-weight: bold;
+  padding-top: 5px;
+  z-index: 20;
+}
+
+#pageName {
+  background-color: #1b1b1b;
+  font: 2.0em Cambria, 'Times New Roman', serif;
+  font-weight: bold;
+  margin-left: 0.8rem;
+  color: #bbb;
+  padding-top: 24px;
+  white-space: nowrap;
+  max-width: 260px;
+  overflow-x: auto;
+  /* overflow-x: scroll; */
+}
+
+/* container for number of qs in the test and the score */
+#scorecontainer {
+  top: 11px;
+  color: white;
+  z-index: 5000;
+}
+
+#score_input {
+  width: 30px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 3px;
+  color: black;
+}
+
+#thescore {
+  background-color: #1b1b1b;
+  font: 2em sans serif, Arial, sans serif;
+  padding: 0 0.5em;
+}
+
+#topmenucontainer {
+  padding-top: 7px;
+  background-color: #1b1b1b;
+  position: relative;
+  z-index: 130;
+}
+
+#fn {
+  position: relative;
+  display: block;
+  padding: 5px 0;
+  margin-top: 5px;
+  color: #e6e6e6;
+}
+
+input#fn_output {
+  background-color: #eee;
+  width: 162px;
+  padding-left: 3px;
+  margin-left: 3px;
+  color: black;
+}
+
+#gamecontainer {
+  background-color: #1b1b1b;
+  padding-left: 1.5rem;
+
+}
+
+#gobutton {
+  width: 60px;
+  height: 38px;
+  margin: 6px 0;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+#clock {
+  width: 43px;
+  width: 50px;
+  text-align: right;
+  background-color: #eee;
+  padding-right: 3px;
+  font-weight: bold;
+  color: black;
+}
+
+
+/* menu items in topdiv */
+
+#topmenumask {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 6000;
+}
+
+#toprightmenumask {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0;
+  z-index: 6000;
+}
+
+#gobuttonmask {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  margin: 6px 0;
+  z-index: 6000;
+}
+
+#topdiv #theMenu {
+  list-style: none;
+  z-index: 5000;
+  position: relative;
+  border-right: 1px solid #888;
+  white-space: nowrap;
+}
+
+#topdiv ul li {
+  font: 1rem Cambria, sans-serif;
+  font: 0.9rem Cambria, sans-serif;
+  /* font: 0.9em Cambria, sans-serif; */
+  /* font: 12px/16px Geneva, Arial, "Helvetica Neue", Helvetica, Cambria, sans-serif; */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
+  border-bottom: 1px solid #888;
+  color: #e6e6e6;
+  background-color: black;
+  padding: 6px 11px;
+}
+
+#topdiv ul li:hover {
+  color: white;
+  border: 1px solid yellow;
+  padding-right: 10px;
+}
+
+#topdiv ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 29px;
+  left: -1px;
+  width: 120px;
+  /* default width of dropdown menu */
+  -webkit-box-shadow: 0px 1px 2px 1px #555;
+  -moz-box-shadow: 0px 1px 2px 1px #555;
+  box-shadow: 0px 1px 2px 1px #555;
+  border-top: 1px solid #888;
+  border-right: 1px solid #888;
+  z-index: 5000;
+}
+
+#topdiv ul li ul.ul_2 {
+  /* this is for the Settings menu  */
+  width: 150px;
+  width: 170px;
+}
+
+#topdiv ul li ul li {
+  display: block;
+  z-index: 100;
+}
+
+#topdiv ul li:hover ul {
+  display: block;
+}
+
+
+#bottomdiv {
+  background-color: #1b1b1b;
+  color: white;
+  padding: 1px 10px;
+  border-top: 4px solid #bbb;
+  position: relative;
+}
+
+
+
+/* Content
+   ========================================================================== */
+
+
+/* class for the categories and checklist dialogs, no longer checklist
+===================================== */
+.container_class {
+  position: absolute;
+  z-index: 9999;
+  border: 3px solid black;
+}
+
+
+/* dialog for showing the categories
+===================================== */
+
+#catlist_container {
+  width: 410px;
+}
+
+#catlistDialog {
+  border: 2px solid #ccc;
+  overflow: auto;
+}
+
+.cat_name {
+  display: inline-block;
+  width: 285px;
+  overflow: hidden;
+  padding-left: 6px;
+}
+
+#numQs {
+  /* display: inline-block; */
+  /* width: 40px; */
+  /* padding-right: 15px; */
+  /* text-align: right; */
+  white-space: nowrap;
+}
+
+.selected_cb {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+
+/* style for the button in categories and checklist dialogs
+ ============================================================*/
+button.butt_class1 {
+  padding: 2px;
+  margin: 5px;
+  float: right;
+}
+
+/* the next two rules are for getting the number of questions and getting the time allowed and the audio volume
+ ===========================================================================================*/
+.div_nq_ta_av {
+  position: absolute;
+  background-color: white;
+  border: solid 3px #000;
+  z-index: 9000;
+}
+
+.input_nq_ta {
+  width: 35px;
+  text-align: right;
+  padding-right: 3px;
+  background-color: #e6e6e6;
+  border: solid 2px #888;
+}
+
+.input_clb {
+  width: 85px;
+  padding-right: 3px;
+  background-color: #e6e6e6;
+  border: solid 2px #888;
+}
+
+/* style for getting the key to unlock a restricted-access file
+ ===============================================================*/
+.input_key {
+  width: 160px;
+  padding-right: 1px;
+  padding-left: 3px;
+  background-color: #eeeeee;
+  border: solid 2px #888;
+  font-weight: bold;
+  font-family: Cambria, 'Times New Roman';
+  font-size: 1.1em;
+}
+
+/* styles for showing the information at start, ie startupbox - also used for the unlockbox
+ ==============================================*/
+.boxHead1_class {
+  padding: 0.2em 0;
+  font: 1.2em Cambria, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.boxContent1_class {
+  font: 1.1em Cambria, 'Times New Roman', serif;
+  width: 570px;
+}
+
+
+/* style for showing the information at start 
+ ==============================================*/
+.info_class {
+  display: inline-block;
+  margin: 0 6% 0.5em 3em;
+  padding: 0.2em 0;
+  font: 1.2em Cambria, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content_class {
+  margin: -0.6em 6% 0.5em 3em;
+  padding: 0 0.5em;
+  font: 1.1em Cambria, 'Times New Roman', serif;
+  width: 530px;
+}
+
+.contact_class {
+  margin-left: 1.5em;
+}
+
+
+/* style for flashbox
+====================== */
+#flashbox {
+  z-index: 10000;
+  width: auto;
+  text-align: center;
+}
+
+/* style for endbox
+====================== */
+#endbox {
+  z-index: 9000;
+  width: auto;
+  text-align: center;
+  background-color: #eee;
+}
+
+
+/* 
+---------------------------
+Styles for displaying the question and options.
+---------------------------
+ */
+
+#ques {
+  padding: 1rem 2rem;
+}
+
+.q_class {
+  position: relative;
+  padding: 0 1rem 0 2rem;
+  display: table;
+}
+
+#q_horn {
+  position: absolute;
+  top: 5px;
+  left: 1.2rem;
+}
+
+
+.opts {
+  padding: 1em 3em;
+}
+
+#opt_horn {
+  position: absolute;
+  top: 4px;
+  right: -7px;
+}
+
+.qo_cell_text {
+  white-space: pre-wrap;
+  padding-top: 12px;
+}
+
+.qo_cell_picture {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
+}
+
+.qo_outer_text {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 18px;
+  padding-left: 10px;
+}
+
+.n_cell {
+  font: 1.3em Cambria, 'Times New Roman', serif;
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
+  padding-right: 8px;
+  padding-right: 12px;
+}
+
+.n_format {
+  padding: 3px 8px;
+  border: 4px solid;
+  margin: 0.2em 0em;
+  border-radius: 5px 5px;
+}
+
+.opt_class {
+  border-width: 2px 3px 3px 2px;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: outset;
+  padding: 0.4em 0.9em;
+  margin-right: 1.5em;
+  display: table;
+  cursor: pointer;
+}
+
+/* trying this - same as Coding1 and cats6 */
+#topdiv {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  /* width: 100%; */
+  z-index: 700;
+  border-bottom: 2px solid #6f0;
+  min-height: 80px;
+  min-height: 70px;
+}
+
+#topdiv #topdivLeft,
+#topdiv #topdivRight {
+  display: flex;
+}
+
+
+
+@media (max-width:900px) {
+
+  #pageName {
+    max-width: 160px;
+  }
+
+
+}
